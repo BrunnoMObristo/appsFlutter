@@ -29,15 +29,17 @@ class _HomeState extends State<Home> {
       double num = double.parse(valorController.text);
       String valorDrop = 'Dólar Real Euro';
 
+      //Real
       if (selectValor == "Real" && selectValor2 == "Dólar") {
         double calculo = (num / 5.37);
         resultadoConversao = "$calculo de Dólares";
       }
       if (selectValor == "Real" && selectValor2 == "Euro") {
         double calculo = (num / 6.22);
-        resultadoConversao = "$calculo euros";
+        resultadoConversao = "$calculo Euros";
       }
-      //Dólar 1
+
+      //Dólar 
       if (selectValor == "Dólar" && selectValor2 == "Real") {
         double calculo = (num * 5.37);
         resultadoConversao = "$calculo Reais";        
@@ -46,13 +48,15 @@ class _HomeState extends State<Home> {
         double calculo = (num * 0.86);
         resultadoConversao = "$calculo Euros";
       }
+
+      //Euro
       if (selectValor == "Euro" && selectValor2 == "Real") {
         double calculo = (num * 6.22);
-        resultadoConversao = "$calculo dólares";
+        resultadoConversao = "$calculo Reais";
       }
       if (selectValor == "Euro" && selectValor2 == "Dólar") {
         double calculo = (num * 1.16);
-        resultadoConversao = "$calculo dólares";
+        resultadoConversao = "$calculo Dólares";
       }
     });
   }
